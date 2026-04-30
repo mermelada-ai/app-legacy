@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>High-Hierarchy Assets Repository</title>
+    <title>Repositorio de Activos de Alta Jerarquía</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -15,9 +15,9 @@
         }
         .serif { font-family: 'Playfair Display', serif; }
         
-        /* Fondo con la imagen proporcionada */
+        /* Fondo cinematográfico con la imagen proporcionada */
         .hero-bg {
-            background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.7), #0a0a0a), url('https://i.imgur.com/5g4Gdgn.jpeg');
+            background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.8), #0a0a0a), url('https://i.imgur.com/5g4Gdgn.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -41,7 +41,7 @@
             overflow: hidden;
             border-radius: 4px;
         }
-        /* Modal Acceso */
+        /* Modal de Acceso / Paywall */
         #access-modal {
             background: rgba(0, 0, 0, 0.95);
             display: none;
@@ -50,44 +50,45 @@
 </head>
 <body class="antialiased">
 
-    <!-- Modal de Registro (Paywall) -->
+    <!-- Modal de Registro (Control de acceso después de 5 días) -->
     <div id="access-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-6">
         <div class="max-w-md w-full glass-card p-10 rounded-xl text-center">
             <h2 class="serif text-3xl mb-4">Acceso Exclusivo</h2>
-            <p class="text-gray-400 text-sm mb-8">Tus 5 días de prueba han expirado. Registra tu perfil para continuar explorando los activos de alta jerarquía.</p>
+            <p class="text-gray-400 text-sm mb-8">Tus 5 días de acceso gratuito han finalizado. Por favor, registra tu perfil para continuar explorando este repositorio de alta jerarquía.</p>
             <form id="registration-form" class="space-y-4">
                 <input type="text" id="reg-name" placeholder="Nombre completo" required class="w-full bg-white/5 border border-white/10 p-3 rounded text-sm outline-none focus:border-white/40">
                 <input type="email" id="reg-email" placeholder="Correo electrónico" required class="w-full bg-white/5 border border-white/10 p-3 rounded text-sm outline-none focus:border-white/40">
-                <button type="submit" class="w-full bg-white text-black py-3 rounded font-bold text-xs uppercase tracking-widest hover:bg-gray-200 transition">Habilitar Acceso</button>
+                <button type="submit" class="w-full bg-white text-black py-3 rounded font-bold text-xs uppercase tracking-widest hover:bg-gray-200 transition">Habilitar Acceso Permanente</button>
             </form>
         </div>
     </div>
 
-    <!-- Navegación -->
+    <!-- Navegación Principal -->
     <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-white/10">
         <div class="text-xl font-bold tracking-tighter serif uppercase tracking-widest flex items-center gap-3">
-            <img src="https://i.imgur.com/5g4Gdgn.jpeg" alt="Logo" class="w-8 h-8 rounded-full object-cover border border-white/20">
-            <span>Mastery Repository</span>
+            <img src="https://i.imgur.com/5g4Gdgn.jpeg" alt="Logotipo" class="w-8 h-8 rounded-full object-cover border border-white/20">
+            <span>Repositorio de Maestría</span>
         </div>
         <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-widest font-light">
             <a href="#film" class="hover:text-white transition">Cinematografía</a>
             <a href="#thesis" class="hover:text-white transition">Tesis</a>
             <a href="#capsules" class="hover:text-white transition">Cápsulas</a>
-            <div id="user-badge" class="hidden px-3 py-1 bg-white/10 border border-white/20 rounded-full text-[10px]">Top Contributor</div>
+            <div id="user-badge" class="hidden px-3 py-1 bg-white/10 border border-white/20 rounded-full text-[10px] text-amber-400">Contribuidor Top</div>
         </div>
     </nav>
 
-    <!-- Main Content -->
+    <!-- Contenido de la Aplicación -->
     <main id="app-content">
-        <!-- Hero: Film Section con Fondo de Imagen -->
+        
+        <!-- Sección Hero: Cortometraje Cinematográfico -->
         <section id="film" class="hero-bg pt-48 pb-32 px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
                     <div>
-                        <h2 class="text-xs uppercase tracking-[0.3em] text-gray-300 mb-2 font-bold">The Short Film</h2>
-                        <h1 class="text-5xl md:text-6xl serif gradient-text mb-6 leading-tight">Filosofía de Vida y Visión de Futuro</h1>
+                        <h2 class="text-xs uppercase tracking-[0.3em] text-gray-300 mb-2 font-bold">Cortometraje Central</h2>
+                        <h1 class="text-5xl md:text-6xl serif gradient-text mb-6 leading-tight">Filosofía de Vida y Visión Estratégica</h1>
                         <p class="text-gray-300 font-light mb-8 max-w-lg">
-                            Una inmersión cinematográfica en los hitos que definen el liderazgo de alta jerarquía.
+                            Una inmersión profunda en los hitos que definen el liderazgo de alta jerarquía y la resiliencia ante el fracaso.
                         </p>
                         <div class="video-container shadow-2xl group cursor-pointer border border-white/10">
                             <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition duration-500"></div>
@@ -99,19 +100,19 @@
                         </div>
                     </div>
                     <div class="glass-card p-10 rounded-lg">
-                        <h3 class="text-xs uppercase tracking-widest text-gray-400 mb-6 font-bold">Guion de Ayuda / Storyboard</h3>
+                        <h3 class="text-xs uppercase tracking-widest text-gray-400 mb-6 font-bold">Guion de Ayuda / Estructura Narrativa</h3>
                         <div class="text-sm text-gray-300 space-y-6 font-light italic leading-relaxed">
                             <div class="border-l-2 border-white/20 pl-4">
                                 <p class="font-semibold text-white not-italic mb-1">1. [0:00-3:00] El Origen</p>
-                                <p>Narrativa sobre la infancia y la primera chispa de ambición. Visuales de alto contraste.</p>
+                                <p>Exploración de la infancia y la chispa inicial de ambición. Visuales de alto contraste y tono íntimo.</p>
                             </div>
                             <div class="border-l-2 border-white/20 pl-4">
                                 <p class="font-semibold text-white not-italic mb-1">2. [3:00-7:00] El Fracaso Clave</p>
-                                <p>Reconstrucción visual de la caída y el proceso de resiliencia. Estética boutique.</p>
+                                <p>Análisis crudo de la caída y el proceso de reconstrucción. Estética boutique centrada en la reflexión.</p>
                             </div>
                             <div class="border-l-2 border-white/20 pl-4">
-                                <p class="font-semibold text-white not-italic mb-1">3. [7:00-15:00] El Futuro</p>
-                                <p>Proyección de la tesis aplicada al mundo real. Cierre cinematográfico.</p>
+                                <p class="font-semibold text-white not-italic mb-1">3. [7:00-15:00] Visión de Futuro</p>
+                                <p>Proyección de la tesis profesional aplicada al mundo real. Cierre con llamado a la excelencia.</p>
                             </div>
                         </div>
                     </div>
@@ -119,7 +120,7 @@
             </div>
         </section>
 
-        <!-- Tesis Section -->
+        <!-- Sección de Tesis: Deep Work -->
         <section id="thesis" class="py-24 bg-[#0d0d0d] border-y border-white/5">
             <div class="px-6 max-w-6xl mx-auto">
                 <div class="flex items-center gap-4 mb-12">
@@ -127,24 +128,26 @@
                     <div class="h-[1px] flex-grow bg-white/10"></div>
                 </div>
                 <div id="thesis-list" class="grid md:grid-cols-2 gap-8">
-                    <!-- Articulo -->
+                    <!-- Ejemplo de Artículo -->
                     <div class="glass-card p-8 flex justify-between items-start group hover:bg-white/[0.05]">
                         <div>
                             <span class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">LinkedIn Premium</span>
-                            <h4 class="text-xl serif mt-2 group-hover:text-white transition">La Arquitectura del Pensamiento</h4>
-                            <p class="text-sm text-gray-500 mt-2 font-light italic">Reflexiones sobre la tesis de liderazgo moderno.</p>
+                            <h4 class="text-xl serif mt-2 group-hover:text-white transition">La Arquitectura del Pensamiento Crítico</h4>
+                            <p class="text-sm text-gray-500 mt-2 font-light italic">Reflexiones profundas sobre el liderazgo en la era de la distracción.</p>
                         </div>
-                        <a href="#" class="text-white/20 group-hover:text-white transition"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+                        <a href="#" title="Leer artículo" class="text-white/20 group-hover:text-white transition">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Cápsulas Section -->
+        <!-- Sección de Cápsulas Boutique -->
         <section id="capsules" class="py-24 px-6 max-w-6xl mx-auto">
             <div class="text-center mb-20">
-                <h2 class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-4">Reflexiones Humanas</h2>
-                <h3 class="text-5xl serif italic">Cápsulas Boutique</h3>
+                <h2 class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-4">Reflexiones Estratégicas</h2>
+                <h3 class="text-5xl serif italic">Cápsulas de Sabiduría</h3>
             </div>
             
             <div id="capsules-grid" class="space-y-24">
@@ -152,24 +155,26 @@
                     <div class="w-full md:w-1/2 group">
                         <div class="video-container mb-6 border border-white/5 overflow-hidden">
                              <div class="absolute inset-0 bg-gradient-to-tr from-black/60 to-transparent z-10"></div>
-                             <img src="https://i.imgur.com/5g4Gdgn.jpeg" alt="Capsule Thumb" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000">
+                             <img src="https://i.imgur.com/5g4Gdgn.jpeg" alt="Miniatura de Cápsula" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000">
                         </div>
-                        <h4 class="text-2xl serif italic tracking-wide">Reflexión sobre el capital humano</h4>
-                        <p class="text-xs text-gray-500 uppercase tracking-widest mt-2">Tema: Liderazgo Estratégico</p>
+                        <h4 class="text-2xl serif italic tracking-wide">El Capital Humano como Activo Prioritario</h4>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest mt-2">Tema: Estrategia y Liderazgo</p>
                     </div>
                     <div class="w-full md:w-1/2 bg-white/[0.01] p-10 border border-white/5 rounded-sm relative">
-                        <div class="absolute -top-4 -left-4 w-8 h-8 bg-white/5 border border-white/10 flex items-center justify-center serif italic text-lg">“</div>
-                        <h5 class="text-xs uppercase tracking-widest text-gray-400 mb-6 font-bold">Guion de Soporte</h5>
+                        <div class="absolute -top-4 -left-4 w-8 h-8 bg-white/5 border border-white/10 flex items-center justify-center serif italic text-lg text-white/30">“</div>
+                        <h5 class="text-xs uppercase tracking-widest text-gray-400 mb-6 font-bold tracking-widest">Guion de Ayuda</h5>
                         <p class="text-base text-gray-400 font-light leading-relaxed italic">
-                            "En esta cápsula, el líder aborda la diferencia entre gestión y guía. El guion sugiere enfatizar la mirada a cámara en el minuto 1:30 para generar conexión directa con el espectador."
+                            "En esta reflexión, abordamos la transición de ser un gestor a convertirse en un guía. El guion sugiere mantener contacto visual directo durante la conclusión para enfatizar la autoridad humana."
                         </p>
+                        
+                        <!-- Sección de Comentarios (Solo para Top 3) -->
                         <div id="comment-section" class="mt-10 pt-10 border-t border-white/10 hidden">
                             <div class="flex items-center gap-2 mb-4">
                                 <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                                <p class="text-[10px] text-green-400 uppercase tracking-widest font-bold">Privilegio Top 3 Activado</p>
+                                <p class="text-[10px] text-green-400 uppercase tracking-widest font-bold">Privilegio de Interacción Activado (Top 3)</p>
                             </div>
-                            <textarea placeholder="Comparte tu visión estratégica con el líder..." class="w-full bg-white/5 border border-white/10 rounded p-4 text-sm outline-none focus:border-white/30 transition h-32 resize-none"></textarea>
-                            <button class="mt-4 text-[10px] uppercase tracking-widest border border-white/20 px-6 py-2 hover:bg-white hover:text-black transition">Enviar Reflexión</button>
+                            <textarea placeholder="Deja tu reflexión estratégica aquí..." class="w-full bg-white/5 border border-white/10 rounded p-4 text-sm outline-none focus:border-white/30 transition h-32 resize-none"></textarea>
+                            <button class="mt-4 text-[10px] uppercase tracking-widest border border-white/20 px-6 py-2 hover:bg-white hover:text-black transition">Enviar Comentario</button>
                         </div>
                     </div>
                 </div>
@@ -177,37 +182,45 @@
         </section>
     </main>
 
+    <!-- Pie de Página -->
     <footer class="py-20 text-center border-t border-white/5 bg-[#050505]">
-        <img src="https://i.imgur.com/5g4Gdgn.jpeg" alt="Logo Footer" class="w-12 h-12 rounded-full object-cover mx-auto mb-6 opacity-50 grayscale hover:grayscale-0 transition duration-700">
-        <p class="text-xs tracking-[0.6em] uppercase text-gray-600">Repositorio Privado — 2026</p>
+        <img src="https://i.imgur.com/5g4Gdgn.jpeg" alt="Logo de cierre" class="w-12 h-12 rounded-full object-cover mx-auto mb-6 opacity-40 grayscale hover:grayscale-0 transition duration-1000">
+        <p class="text-xs tracking-[0.6em] uppercase text-gray-600 italic">Repositorio Privado de Activos de Alta Jerarquía — 2026</p>
     </footer>
 
     <script>
-        // --- LÓGICA DE ACCESO Y DÍAS GRATIS ---
-        const FREE_DAYS = 5;
+        // --- LÓGICA DE CONTROL DE ACCESO (5 DÍAS) ---
+        const DIAS_GRATIS = 5;
 
-        function checkAccess() {
-            const firstAccess = localStorage.getItem('app_first_access');
-            const isRegistered = localStorage.getItem('app_user_registered');
+        function verificarAcceso() {
+            const primerAcceso = localStorage.getItem('app_primer_acceso');
+            const usuarioRegistrado = localStorage.getItem('app_usuario_registrado');
 
-            if (!firstAccess) {
-                localStorage.setItem('app_first_access', Date.now());
+            if (!primerAcceso) {
+                // Registrar el primer momento de entrada
+                localStorage.setItem('app_primer_acceso', Date.now());
                 return;
             }
 
-            if (isRegistered) {
-                loadTopStatus(localStorage.getItem('app_user_email'));
+            if (usuarioRegistrado) {
+                // Si ya está registrado, cargar estatus especial si corresponde
+                cargarEstatusTop(localStorage.getItem('app_usuario_email'));
                 return;
             }
 
-            const diff = (Date.now() - parseInt(firstAccess)) / (1000 * 60 * 60 * 24);
-            if (diff > FREE_DAYS) {
+            const diferenciaDias = (Date.now() - parseInt(primerAcceso)) / (1000 * 60 * 60 * 24);
+            if (diferenciaDias > DIAS_GRATIS) {
+                // Bloquear visualización
                 document.getElementById('access-modal').style.display = 'flex';
                 document.getElementById('app-content').classList.add('blur-xl');
             }
         }
 
-        function loadTopStatus(email) {
+        /**
+         * Verifica si el usuario pertenece al Top 3 para habilitar comentarios
+         */
+        function cargarEstatusTop(email) {
+            if (!email) return;
             google.script.run.withSuccessHandler(topEmails => {
                 if (topEmails && topEmails.includes(email)) {
                     document.getElementById('user-badge').classList.remove('hidden');
@@ -216,29 +229,26 @@
             }).obtenerTopUsuarios();
         }
 
-        // --- MANEJO DE REGISTRO ---
+        // --- MANEJO DEL FORMULARIO DE REGISTRO ---
         document.getElementById('registration-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const nombre = document.getElementById('reg-name').value;
             const correo = document.getElementById('reg-email').value;
             
-            const ubicacion = "Visualización Web"; 
+            // Ubicación genérica para el registro
+            const ubicacion = "Plataforma Web Master"; 
 
             google.script.run.withSuccessHandler(() => {
-                localStorage.setItem('app_user_registered', 'true');
-                localStorage.setItem('app_user_email', correo);
+                localStorage.setItem('app_usuario_registrado', 'true');
+                localStorage.setItem('app_usuario_email', correo);
                 document.getElementById('access-modal').style.display = 'none';
                 document.getElementById('app-content').classList.remove('blur-xl');
-                loadTopStatus(correo);
+                cargarEstatusTop(correo);
             }).registrarAccesoUsuario({ nombre, correo, ubicacion });
         });
 
-        // --- INICIALIZACIÓN ---
-        function inicializar() {
-            google.script.run.withSuccessHandler(msg => alert(msg)).inicializarEstructura();
-        }
-
-        window.onload = checkAccess;
+        // Inicialización al cargar la ventana
+        window.onload = verificarAcceso;
     </script>
 </body>
 </html>
